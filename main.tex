@@ -34,10 +34,11 @@
 % ------------------------------------------------------------------
 \newcommand{\resumeitem}[1]{\item #1}
 
+% {Company}{Dates}{Role}{Location}
 \newcommand{\entry}[4]{%
   \noindent
-  \textbf{#1} \hfill \textit{#2} \\
-  \textit{#3} \hfill #4 \par
+  \textbf{#1} \hfill #2 \\
+  \textit{#3} \hfill \textit{#4} \par
 }
 
 % ------------------------------------------------------------------
@@ -46,84 +47,99 @@
 % ── Header ─────────────────────────────────────────────────────────
 \begin{center}
   {\Huge\bfseries Shiva Mishra} \\[4pt]
-  Lead AI/ML Engineer \\[4pt]
-  Hyderabad, India \quad|\quad
-  \href{mailto:21shiva12mishra@gmail.com}{21shiva12mishra@gmail.com} \quad|\quad
-  \href{https://linkedin.com/in/shivamishra1}{linkedin.com/in/shivamishra1} \quad|\quad
-  \href{https://github.com/bydefaultuser}{github.com/bydefaultuser}
+  AI/ML Engineer \textbar{} Multi-Agent AI Systems \textbar{} MLOps \textbar{} Network Automation \\[4pt]
+  +91 6393320846 \quad\textbar\quad
+  \href{mailto:21shiva12mishra@gmail.com}{21shiva12mishra@gmail.com} \quad\textbar\quad
+  \href{https://linkedin.com/in/shivamishra1}{linkedin.com/in/shivamishra1} \quad\textbar\quad
+  \href{https://github.com/bydefaultuser}{github.com/bydefaultuser} \\[2pt]
+  Hyderabad, India
 \end{center}
 
 % ── Summary ────────────────────────────────────────────────────────
 \section{Summary}
-Lead AI/ML Engineer with production experience designing and deploying multi-agent LLM systems,
-RAG pipelines, and network automation tooling at scale.
-Specialises in LangChain/LangGraph orchestration, MCP server development, and AWS cloud infrastructure.
-Passionate about building AI systems that are observable, testable, and production-ready.
+
+AI/ML Engineer and Systems Architect with production experience building multi-agentic AI systems,
+MLOps pipelines, and enterprise network automation platforms. Early adopter of Model Context Protocol
+(MCP) --- deployed production MCP-based multi-agent systems within months of its release. Rare
+combination of AI Engineering, DevOps, and Network Automation with hands-on team leadership experience.
 
 % ── Experience ─────────────────────────────────────────────────────
 \section{Experience}
 
-\entry{Lead AI/ML Engineer}{Keyspark Technologies, Hyderabad}{Full-Time}{2023 -- Present}
+\entry{Keyspark Technologies}{April 2025 -- Present}{Lead AI/ML Engineer and Systems Architect}{Hyderabad, India}
 \begin{itemize}
-  \resumeitem{Architected a multi-agent LLM platform using LangGraph with a supervisor–worker pattern,
-              reducing manual triage time for network incidents by 60\%.}
-  \resumeitem{Built production MCP servers (FastAPI + SSE transport) exposing internal tools to Claude Desktop
-              and custom AI agents across the engineering organisation.}
-  \resumeitem{Designed and deployed RAG pipelines using ChromaDB and Supabase for domain-specific
-              knowledge retrieval, achieving sub-500 ms p95 query latency.}
-  \resumeitem{Integrated Nautobot, Batfish, and NIST NVD APIs into automated network compliance workflows,
-              cutting CVE review cycles from days to hours.}
-  \resumeitem{Provisioned and maintained AWS infrastructure (ECS, ECR, RDS, S3, CloudWatch) with Terraform
-              and GitHub Actions CI/CD; drove 99.9\% uptime across all AI services.}
-  \resumeitem{Set up observability with VictoriaMetrics and Telegraf for LLM token usage, latency,
-              and error rate dashboards.}
+  \resumeitem{Architected production-grade autonomous network operations platform using MCP to
+              orchestrate 7 specialized AI agents across Nautobot, Batfish and VictoriaMetrics
+              --- reducing CVE remediation planning from days to under 2 hours.}
+  \resumeitem{Designed fault-tolerant microservices architecture with graceful restart, job queue
+              checkpointing and service isolation across 20+ containerized services ensuring zero
+              cascade failures.}
+  \resumeitem{Built single-tenant SaaS architecture with Terraform-automated client onboarding ---
+              dedicated AWS EC2 environment per enterprise client provisioned in minutes via
+              Infrastructure as Code.}
+  \resumeitem{Implemented human-in-the-loop approval workflow --- AI generates remediation plans,
+              senior engineer approves via ticketing before any network changes are applied.}
+  \resumeitem{Leading team of 5 engineers --- architecture decisions, code reviews, sprint planning
+              and weekly releases.}
 \end{itemize}
 
 \vspace{6pt}
-\entry{ML Engineer}{Previous Role}{Full-Time}{2021 -- 2023}
+\entry{Convdata}{2024 -- 2025}{AI Engineer Intern}{Remote}
 \begin{itemize}
-  \resumeitem{Fine-tuned BERT and GPT-2 models for domain-specific NLP classification tasks
-              (precision/recall > 0.92 on held-out test sets).}
-  \resumeitem{Built data pipelines ingesting 10M+ records/day using PostgreSQL, Redis, and Python
-              async workers.}
-  \resumeitem{Deployed models on AWS EC2 with Docker; introduced model-versioning workflow that
-              reduced rollback time from hours to under 5 minutes.}
+  \resumeitem{Built production multi-agent AI system for healthcare behavioural analysis using
+              LangChain and LangGraph.}
+  \resumeitem{Implemented LangGraph state machines managing agent decision trees, tool calling and
+              conditional workflow branching.}
 \end{itemize}
+
+\vspace{6pt}
+\entry{Quirk.tech}{November 2024 -- April 2025}{Data Science Intern}{Bhubaneswar, India}
+\begin{itemize}
+  \resumeitem{Built AI-driven WAF alert classification system using LLMs, RAG and Supabase vector
+              search reducing cybersecurity false positives.}
+  \resumeitem{Designed end-to-end ML pipelines for predictive analytics and customer segmentation.}
+\end{itemize}
+
+% ── Projects ───────────────────────────────────────────────────────
+\section{Projects}
+
+\noindent\textbf{Autonomous Network Operations Platform} \hfill \textit{Keyspark Technologies (Private)}
+\begin{itemize}
+  \resumeitem{Production enterprise system --- autonomous network assessment, CVE remediation,
+              golden config management, what-if analysis, real-time monitoring and automated ticketing.}
+  \resumeitem{Built on industry standard open source tools: Nautobot, Batfish, VictoriaMetrics
+              and ChromaDB.}
+\end{itemize}
+
+% ── Education ──────────────────────────────────────────────────────
+\section{Education}
+
+\entry{Alliance University}{2025}{Master of Science in Data Science}{Bengaluru, Karnataka}
+
+\vspace{6pt}
+\entry{CSJM University}{2023}{Bachelor of Science in Mathematics (Minor: Physics)}{Kanpur, Uttar Pradesh}
 
 % ── Skills ─────────────────────────────────────────────────────────
 \section{Technical Skills}
 
 \noindent
-\begin{tabular}{@{}ll}
-  \textbf{AI / ML}         & LLMs, LangChain, LangGraph, MCP, RAG, ChromaDB, PyTorch, TensorFlow, \\
-                           & Hugging Face, NLP, Fine-tuning \\[4pt]
-  \textbf{Cloud / DevOps}  & AWS (EC2, ECS, ECR, RDS, S3, CloudWatch), Terraform, Docker, \\
-                           & GitHub Actions, CI/CD, Linux \\[4pt]
-  \textbf{Network Automation} & Nautobot, Batfish, VictoriaMetrics, Telegraf, SNMP, Nginx, Cloudflare \\[4pt]
-  \textbf{Databases}       & PostgreSQL, Redis, ChromaDB, Supabase \\[4pt]
-  \textbf{Languages}       & Python (Expert), SQL, Bash \\
+\begin{tabular}{@{}p{3.8cm}p{10.7cm}}
+  \textbf{AI/ML}               & LLMs, Multi-Agent Systems, LangChain, LangGraph, MCP, RAG,
+                                 ChromaDB, PyTorch, TensorFlow, Hugging Face, NLP, Generative AI \\[4pt]
+  \textbf{DevOps/Cloud}        & AWS (EC2, ECS, ECR, RDS, S3, CloudWatch), Terraform, Docker,
+                                 GitHub Actions, CI/CD, Linux \\[4pt]
+  \textbf{Network Automation}  & Nautobot, Batfish, VictoriaMetrics, Telegraf, SNMP, Nginx, Cloudflare \\[4pt]
+  \textbf{Databases}           & PostgreSQL, Redis, ChromaDB, Supabase \\[4pt]
+  \textbf{Programming}         & Python (Expert), SQL, Bash \\
 \end{tabular}
 
-% ── Projects ───────────────────────────────────────────────────────
-\section{Open-Source Projects}
+% ── Certifications ─────────────────────────────────────────────────
+\section{Certifications}
 
-\noindent\textbf{\href{https://github.com/bydefaultuser/mcp-server-template}{mcp-server-template}}
-\hfill \textit{Python, FastAPI, MCP}\\
-Production-ready template for building Model Context Protocol servers with HTTP and SSE transports.
-
-\vspace{4pt}
-\noindent\textbf{\href{https://github.com/bydefaultuser/multi-agent-ai-starter}{multi-agent-ai-starter}}
-\hfill \textit{Python, LangGraph, LangChain}\\
-Boilerplate for supervisor–worker multi-agent systems with researcher, coder, and reviewer agents.
-
-\vspace{4pt}
-\noindent\textbf{\href{https://github.com/bydefaultuser/network-automation-utils}{network-automation-utils}}
-\hfill \textit{Python, Nautobot, NVD API}\\
-Utilities for Nautobot REST integration, Cisco IOS config parsing, and NIST NVD CVE lookup.
-
-% ── Education ──────────────────────────────────────────────────────
-\section{Education}
-
-\entry{B.Tech, Computer Science \& Engineering}{University Name, Hyderabad}{}{2017 -- 2021}
+\begin{itemize}
+  \resumeitem{AWS Certified Cloud Practitioner --- In Progress (2026)}
+  \resumeitem{Exploratory Data Analysis for Machine Learning --- Coursera (2024)}
+  \resumeitem{Snowflake for Data Science: Intro to Snowpark ML for Python --- Coursera (2024)}
+\end{itemize}
 
 \end{document}
